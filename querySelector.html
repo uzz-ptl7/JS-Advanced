@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Query Selector</title>
+    <style>
+        h1 {
+            color: darkblue;
+        }
+        #myButton {
+            background-color: green;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome to TTA Level 2</h1>
+    <p>This is a simple paragraph</p>
+    <button id="myButton">Click me</button>
+
+
+    <script>
+        const heading = document.querySelector('h1');
+        const paragraph = document.querySelector('p');
+        const button = document.querySelector('#myButton');
+        paragraph.style.color = 'darkred';
+        paragraph.textContent = 'This is a new paragraph';
+        console.log(heading);
+
+        button.addEventListener('click', function() {
+            alert('Button clicked');
+            paragraph.style.color = 'darkgreen';
+            paragraph.textContent = 'Button is clicked';
+            heading.style.color = 'darkgreen';
+        });
+    </script>
+</body>
+</html>
