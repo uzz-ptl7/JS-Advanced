@@ -35,6 +35,15 @@
             // count++;
             // counter.textContent = count;
         });
+
+        decreaseButton.addEventListener('click', () => {
+            if(count > 0){
+                count--;
+                counter.textContent = count;
+            } else {
+                alert('Counter cannot be less than 0');
+            }
+        })
     </script>
 </body>
 </html>
