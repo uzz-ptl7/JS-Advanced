@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Simple Counter</title>
+</head>
+<body>
+    <div class="flex justify-around lg:w-[35%] mt-[20px] m-auto">
+        <button id="decreaseButton" class="bg-red-500 p-2 rounded-md text-white">
+            Decrease  
+        </button>
+        <h2 id="counter" class="p-2 border border-gray-400 text-xl font-bold">
+            0
+        </h2>
+        <button id="increaseButton" class="bg-green-500 p-2 rounded-md text-white">
+            Increase
+        </button>
+    </div>
+
+    <script>
+        let count = 0;
+        const counter = document.querySelector('#counter');
+        const increaseButton = document.querySelector('#increaseButton');
+        const decreaseButton = document.querySelector('#decreaseButton');
+
+        increaseButton.addEventListener('click', () => {
+            if(count < 10){
+                count++;
+                counter.textContent = count;
+            } else {
+                alert('Counter cannot be more than 10');
+            }
+            // count++;
+            // counter.textContent = count;
+        });
+    </script>
+</body>
+</html>
