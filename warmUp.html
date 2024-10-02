@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .content1{
+            background-color: darkred;
+            margin: 5px;
+            height: 100px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="content1"></div>
+        <div class="content2">
+            <button id="green">Dark Green</button>
+            <button id="blue">Dark Blue</button>
+            <button id="yellow">Dark Yellow</button>
+        </div>
+    </div>
+
+    <script>
+        const greenButton = document.querySelector('#green');
+        const blueButton = document.querySelector('#blue');
+        const yellowButton = document.querySelector('#yellow');
+        const content1 = document.querySelector('.content1');
+
+        greenButton.addEventListener('click', () => {
+            content1.style.backgroundColor = 'darkgreen'
+        })
+
+        blueButton.addEventListener('click', () => {
+            content1.style.backgroundColor = 'darkblue'
+        })
+        
+        yellowButton.addEventListener('click', () => {
+            content1.style.backgroundColor = 'yellow'
+        })
+    </script>
+</body>
+</html>
