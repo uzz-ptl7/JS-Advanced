@@ -3,31 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <title>Simple Counter</title>
 </head>
 <body>
-    <div class="flex justify-around lg:w-[35%] mt-[20px] m-auto">
+    <div class="flex justify-around lg:w-1/3 mt-3 m-auto">
         <button id="decreaseButton" class="bg-red-500 p-2 rounded-md text-white">
-            Decrease  
+            Decrease
         </button>
         <h2 id="counter" class="p-2 border border-gray-400 text-xl font-bold">
             0
         </h2>
         <button id="increaseButton" class="bg-green-500 p-2 rounded-md text-white">
-            Increase
+            increase
         </button>
     </div>
 
-    <div class="container flex flex-col w-[35%] mt-3 m-auto ">
+    <!-- Background changing Feature -->
+
+    <div class="container flex flex-col w-1/3 mt-3 m-auto">
         <div class="content-1 h-32 bg-red-500 my-3">
 
         </div>
         <div class="content-2 flex justify-around">
             <button id="green" class="p-2 bg-green-500">Dark Green</button>
             <button id="blue" class="p-2 bg-blue-500">Dark Blue</button>
-            <button id="yellow" class="p-2 bg-yellow-500">Yellow</button>
-            <button id="pink" class="p-2 bg-pink-500">Pink</button>
+            <button id="yellow" class="p-2 bg-yellow-500">Dark  Yellow</button>
+            <button id="pink" class="p-2 bg-pink-500">Dark Pink</button>
         </div>
     </div>
 
@@ -38,7 +40,7 @@
         const increaseButton = document.querySelector('#increaseButton');
         const decreaseButton = document.querySelector('#decreaseButton');
 
-        const content1 = document.querySelector('.content-1')
+        const content1 = document.querySelector('.content-1');
         const greenButton = document.querySelector('#green');
         const blueButton = document.querySelector('#blue');
         const yellowButton = document.querySelector('#yellow');
@@ -48,18 +50,16 @@
             content1.classList.remove('bg-green-500', 'bg-blue-500', 'bg-yellow-500', 'bg-pink-500');
         }
 
-        increaseButton.addEventListener('click', () => {
+        increaseButton.addEventListener('click', () =>{
             if(count < 10){
                 count++;
                 counter.textContent = count;
             } else {
                 alert('Counter cannot be more than 10');
             }
-            // count++;
-            // counter.textContent = count;
-        });
+        })
 
-        decreaseButton.addEventListener('click', () => {
+        decreaseButton.addEventListener('click', () =>{
             if(count > 0){
                 count--;
                 counter.textContent = count;
@@ -77,19 +77,16 @@
         blueButton.addEventListener('click', () => {
             removeBg();
             content1.classList.add('bg-blue-500');
-            // content1.classList.toggle('bg-blue-500');
         })
 
         yellowButton.addEventListener('click', () => {
             removeBg();
             content1.classList.add('bg-yellow-500');
-            // content1.classList.toggle('bg-yellow-500');
         })
-
+        
         pinkButton.addEventListener('click', () => {
             removeBg();
             content1.classList.add('bg-pink-500');
-            // content1.classList.toggle('bg-pink-500');
         })
 
     </script>

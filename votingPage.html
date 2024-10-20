@@ -3,32 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <title>Voting Application</title>
 </head>
 <body>
+
     <div class="container w-screen h-screen flex flex-col justify-center items-center">
-        <h1 class="text-3xl font-bold py-3  ">Voting Application</h1>
-        <div class="mb-4 flex justify-around w-[20%]">
+        <h1 class="text-3xl font-bold py-3">Voting Application</h1>
+        <div class="mb-4 flex justify-around w-1/5">
             <button id="voteBtn1" class="bg-blue-500 p-2 rounded-md text-white">Vote For Option 1</button>
-            <span id="counter1" class="p-2 border border-gray-400 text-xl font-bold">0</span>
+            <span id="counter1" class="p-2 border border-gray-400 text-xl font-bold">0</span> 
         </div>
-
-        <div class="mb-4 flex justify-around w-[20%]">
+        <div class="mb-4 flex justify-around w-1/5">
             <button id="voteBtn2" class="bg-green-500 p-2 rounded-md text-white">Vote For Option 2</button>
-            <span id="counter2" class="p-2 border border-gray-400 text-xl font-bold">0</span>
+            <span id="counter2" class="p-2 border border-gray-400 text-xl font-bold">0</span> 
         </div>
-
-        <div class="mb-4 flex justify-around w-[20%]">
+        <div class="mb-4 flex justify-around w-1/5">
             <button id="voteBtn3" class="bg-yellow-500 p-2 rounded-md text-white">Vote For Option 3</button>
-            <span id="counter3" class="p-2 border border-gray-400 text-xl font-bold">0</span>  
+            <span id="counter3" class="p-2 border border-gray-400 text-xl font-bold">0</span> 
         </div>
     </div>
 
     <script>
-        const voteBt1 = document.querySelector('#voteBtn1');
-        const voteBt2 = document.querySelector('#voteBtn2');
-        const voteBt3 = document.querySelector('#voteBtn3');
+        const voteBtn1 = document.querySelector('#voteBtn1');
+        const voteBtn2 = document.querySelector('#voteBtn2');
+        const voteBtn3 = document.querySelector('#voteBtn3');
 
         const counter1 = document.querySelector('#counter1');
         const counter2 = document.querySelector('#counter2');
@@ -50,12 +49,14 @@
                     counterElement.classList.add('bg-green-500');
                 }
                 counterElement.textContent = countIncrement;
-            });
+            })
         }
 
-        increaseVote(voteBt1, count1, counter1);
-        increaseVote(voteBt2, count2, counter2);
-        increaseVote(voteBt3, count3, counter3);
+        increaseVote(voteBtn1, count1, counter1);
+        increaseVote(voteBtn2, count2, counter2);
+        increaseVote(voteBtn3, count3, counter3);
+
+        
     </script>
 </body>
 </html>
